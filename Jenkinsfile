@@ -34,9 +34,9 @@ pipeline {
         stage('Example') {
             steps {
                 script {
-                    env.VERSION = "${env.VERSION}".replace('.', '-')
+                    env.VERSION1 = "${env.VERSION}".replace('.', '-')
                 }
-                echo "Hello - ${env.API_NAME}-${env.VERSION}-${env.VERSION}"
+                echo "Hello - ${env.API_NAME}-${env.VERSION}-${env.VERSION1}"
             }
         }
         /*stage('Unit Test') {
