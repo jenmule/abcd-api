@@ -34,8 +34,8 @@ pipeline {
         stage('Example') {
             steps {
                 script {
-                    env.VERSION = "${env.VERSION}".replaceAll('.', '-')
-                    env.tag = "1.0.6".replace('.', '-')
+                    //env.VERSION = "${env.VERSION}".replaceAll('.', '-')
+                    env.tag = "${env.VERSION}".replace('.', '-')
                 }
                 echo "Hello - ${env.API_NAME}-${env.VERSION}-${env.tag}"
             }
