@@ -37,7 +37,7 @@ pipeline {
                     env.VERSION = "${env.VERSION}".replaceAll('.', '-')
                     env.tag = "foo".replaceAll('o', 'X')
                 }
-                echo "Hello - ${env.API_NAME}-${env.VERSION}-env.tag"
+                echo "Hello - ${env.API_NAME}-${env.VERSION}-${env.tag}"
             }
         }
         /*stage('Unit Test') {
